@@ -1,6 +1,6 @@
 
 :root {
-    --primary: #FF6B6B;
+    --primary: #ffffff;
     --secondary: #4ECDC4;
     --accent: #FFE66D;
     --dark: #292F36;
@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: var(--light);
+    background-color: white;
     color: var(--dark);
     line-height: 1.6;
 }
