@@ -9,5 +9,5 @@ MySQL (já vem incluído no XAMPP/MAMP)
 ##Acessando o Site##
 Acesse a landpage principal:
 
-Abra seu navegador e vá para http://localhost/octo-doces
+Abra seu navegador e vá para http://localhost/OctoDoces
 
