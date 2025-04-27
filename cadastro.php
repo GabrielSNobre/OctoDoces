@@ -35,7 +35,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 <header>
     <div class="container header-content">
-        <div class="logo">Octo<span>Doces</span></div>
+    <div class="container-fluid col-11 m-auto"> 
+                <a href="index.html"> <img src="Logo.png" style="height: 100px; width: 100px;"> </a>
+            
+            </div>
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>

@@ -1,8 +1,8 @@
  /* Mesmo estilo do cadastro.php */
  :root {
-    --primary: #FF6B6B;
+    --primary: #ffffff;
     --secondary: #4ECDC4;
-    --accent: #FFE66D;
+    --accent: #fc0000;
     --dark: #292F36;
     --light: #F7FFF7;
 }
@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: var(--light);
+    background-color: rgb(255, 255, 255);
     color: var(--dark);
     line-height: 1.6;
 }
@@ -27,7 +27,7 @@ body {
 }
 
 header {
-    background-color: var(--primary);
+    background-color: white;
     padding: 20px 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
@@ -41,7 +41,7 @@ header {
 .logo {
     font-size: 2rem;
     font-weight: 700;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
 }
@@ -60,7 +60,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;

@@ -2,7 +2,7 @@
 :root {
     --primary: #ffffff;
     --secondary: #4ECDC4;
-    --accent: #FFE66D;
+    --accent: #fc0000;
     --dark: #292F36;
     --light: #F7FFF7;
 }
@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: var(--dark);
     line-height: 1.6;
 }
@@ -30,6 +30,7 @@ header {
     background-color: var(--primary);
     padding: 20px 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    
 }
 
 .header-content {
@@ -41,7 +42,7 @@ header {
 .logo {
     font-size: 2rem;
     font-weight: 700;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
 }
@@ -60,7 +61,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -71,10 +72,10 @@ nav ul li a:hover {
 }
 
 .hero {
-    height: 80vh;
+    height: 90vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+    background: linear-gradient(rgba(0 , 0 , 0 , 0.5), rgba(0 , 0 , 0 , 0.5)),  
                 url('https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
@@ -93,13 +94,13 @@ nav ul li a:hover {
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    color: var(--dark);
+    color: white;
 }
 
 .btn {
     display: inline-block;
     background-color: var(--secondary);
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
@@ -122,7 +123,7 @@ nav ul li a:hover {
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 50px;
-    color: var(--primary);
+    color: black;
     position: relative;
     display: inline-block;
 }
@@ -175,7 +176,7 @@ nav ul li a:hover {
 
 .product-price {
     font-size: 1.2rem;
-    color: var(--primary);
+    color: black;
     font-weight: 700;
     margin-bottom: 15px;
 }
@@ -207,7 +208,7 @@ footer {
 }
 
 .social-icons a {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 1.5rem;
     margin: 0 10px;
     transition: all 0.3s ease;
