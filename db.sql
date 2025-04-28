@@ -33,10 +33,13 @@ CREATE TABLE pedidos (
 
 -- Adicione alguns produtos de exemplo
 INSERT INTO produtos (nome, descricao, preco, imagem, categoria) VALUES
-('Brigadeiro Gourmet', 'Brigadeiro feito com chocolate belga e granulados especiais', 2.50, 'https://images.unsplash.com/photo-1563805042-7684c019e1cb', 'doces'),
-('Bolo de Chocolate', 'Bolo fofinho com recheio de chocolate meio amargo', 45.00, 'https://images.unsplash.com/photo-1578985545062-69928b1d9587', 'bolos'),
-('Cupcake Red Velvet', 'Cupcake com massa aveludada e cream cheese frosting', 12.00, 'https://images.unsplash.com/photo-1559620192-032c4bc4674e', 'doces'),
-('Torta de Limão', 'Torta com massa crocante e creme de limão siciliano', 35.00, 'https://images.unsplash.com/photo-1603532648955-039310d9ed75', 'bolos');
+('Taça Supreme Bronie', 'Brigadeiro feito com chocolate belga e granulados especiais', 30.50, 'https://images.unsplash.com/photo-1563805042-7684c019e1cb', 'doces'),
+('Bolo de Chocolate', 'Bolo fofinho com recheio de chocolate meio amargo', 100.00, 'https://images.unsplash.com/photo-1578985545062-69928b1d9587', 'bolos'),
+('Cupcake Red Velvet', 'massa aveludada e cream cheese frosting', 120.00, 'https://images.unsplash.com/photo-1559620192-032c4bc4674e', 'doces'),
+('Brigadeiro Goumet', 'Brigadeiro feito com chocolate belga Goumet', 55.00, 'https://images.unsplash.com/photo-1603532648955-039310d9ed75', 'bolos'),
+("Pirulitão", "Pirulito artesanal bom mesmo", 10.00, "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "Doces");
 
 -- Adicione a coluna de endereço na tabela de usuários
 ALTER TABLE usuarios ADD COLUMN endereco TEXT;
+select * from produtos;
+
