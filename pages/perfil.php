@@ -72,6 +72,8 @@ $pedidos = $pedidos->fetchAll();
             color: var(--dark);
             line-height: 1.6;
         }
+
+        
         
         .profile-container {
             max-width: 1000px;
@@ -91,7 +93,7 @@ $pedidos = $pedidos->fetchAll();
         
         .profile-title {
             font-size: 2rem;
-            color: var(--primary);
+            color: var(--secondary);
         }
         
         .btn-logout {
@@ -136,7 +138,7 @@ $pedidos = $pedidos->fetchAll();
         
         .section-title {
             font-size: 1.5rem;
-            color: var(--primary);
+            color: var(--secundary);
             margin: 30px 0 15px;
             padding-bottom: 5px;
             border-bottom: 2px solid var(--accent);

@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
         
         <div class="auth-footer">
-            <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se</a></p>
+            <p>Não tem uma conta? <a color="#4ECDC4" href="cadastro.php" >Cadastre-se</a></p>
         </div>
     </div>
 </body>
