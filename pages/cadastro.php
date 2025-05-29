@@ -16,6 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $erro = "Erro ao cadastrar: " . $e->getMessage();
     }
 }
+if ($_POST['senha'] !== $_POST['confirmar_senha']) {
+    $_SESSION['erro'] = "As senhas não coincidem!";
+    header("Location: cadastro.php");
+    exit();
+}
+
+$senha_hash = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 ?>
 
 <!DOCTYPE html>
@@ -71,6 +78,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" required minlength="6">
             </div>
+            <div class="form-group">
+                <label for="confirmar_senha">Confirmar Senha</label>
+                <input type="password" id="confirmar_senha" name="confirmar_senha" required>
+            </div>           
             
             <button type="submit" class="btn">Cadastrar</button>
         </form>

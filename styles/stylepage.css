@@ -68,7 +68,6 @@
  }
 
  a:link {
-     color: #4ECDC4;
      margin: 30px 0 15px;
      padding-bottom: 5px;
  }
@@ -102,7 +101,7 @@
  .auth-title {
      font-size: 2rem;
      margin-bottom: 20px;
-     color: var(--primary);
+     color: var(--secondary);
      text-align: center;
  }
 

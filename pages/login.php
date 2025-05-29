@@ -2,33 +2,47 @@
 session_start();
 require 'conexao.php';
 
-// Se já estiver logado, redireciona
-if (isset($_SESSION['usuario'])) {
-    header("Location: " . ($_GET['redirect'] ?? 'perfil.php'));
+if ($usuario && password_verify($senha, $usuario['senha'])) {
+    $_SESSION['usuario'] = [
+        'id' => $usuario['id'],
+        'nome' => $usuario['nome'],
+        'email' => $usuario['email'],
+        'tipo_usuario_id' => $usuario['tipo_usuario_id'] // Armazena o tipo de usuário
+    ];
+
+    // Redireciona conforme o tipo de usuário
+    if ($usuario['tipo_usuario_id'] == 2) {
+        $_SESSION['is_admin'] = true; // Sinaliza que é admin
+        header("Location: admin.php");
+    } else {
+        header("Location: perfil.php");
+    }
     exit();
 }
 
-// Processar login
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $email = trim($_POST['email']);
+    $senha = trim($_POST['senha']);
     
-    $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE email = ?");
+    // Verifica se o usuário existe
+    $stmt = $pdo->prepare("SELECT id, nome, email, senha, tipo_usuario_id FROM usuarios WHERE email = ?");
     $stmt->execute([$email]);
     $usuario = $stmt->fetch();
-    
+
     if ($usuario && password_verify($senha, $usuario['senha'])) {
+        // Login bem-sucedido
         $_SESSION['usuario'] = [
             'id' => $usuario['id'],
             'nome' => $usuario['nome'],
-            'email' => $usuario['email']
+            'email' => $usuario['email'],
+            'tipo_usuario_id' => $usuario['tipo_usuario_id']
         ];
         
-        // Recuperar carrinho salvo no banco (se implementado)
-        // $this->recuperarCarrinho($usuario['id']);
-        
-        // Redirecionar para onde o usuário estava ou para a página padrão
-        header("Location: " . ($_GET['redirect'] ?? 'perfil.php'));
+        if ($usuario['tipo_usuario_id'] == 2) {
+            header("Location: admin.php");
+        } else {
+            header("Location: " . ($_GET['redirect'] ?? 'perfil.php'));
+        }
         exit();
     } else {
         $erro = "Email ou senha incorretos!";
