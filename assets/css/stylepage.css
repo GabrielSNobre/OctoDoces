@@ -108,6 +108,11 @@
  .form-group {
      margin-bottom: 20px;
  }
+.form-group a {
+     margin-bottom: 20px;
+     text-align: center;
+     background-color: #c42a39;
+ }
 
  label {
      display: block;

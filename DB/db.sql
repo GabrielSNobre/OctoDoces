@@ -167,3 +167,6 @@ INSERT INTO produtos (nome, descricao, preco, imagem, categoria_id, estoque) VAL
 -- Criar usuário admin de exemplo
 INSERT INTO usuarios (nome, email, senha, tipo_usuario_id, cpf, telefone) VALUES
 ('Admin Octo', 'admin@octodoces.com', SHA2('senhaadmin123', 256), 2, '123.456.789-00', '(11) 99999-9999');
+use octo_doces;
+select * from usuarios;
+update usuarios set tipo_usuario_id = 2 where id = 2;

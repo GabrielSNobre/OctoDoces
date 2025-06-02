@@ -183,7 +183,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style/stylepage.css">
+    <link rel="stylesheet" href="../styles/stylepage.css">
 </head>
 <body>
    <header>
@@ -303,8 +303,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             
             <div class="form-group">
-                <a href="perfil.php" class="btn btn-back">Cancelar</a>
                 <button type="submit" class="btn">Salvar Endereço</button>
+            </div>
+            <div class="form-group">
+                <a href="perfil.php" class="btn btn-back">Cancelar</a>
             </div>
         </form>
     </div>
