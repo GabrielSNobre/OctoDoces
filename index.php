@@ -1,7 +1,11 @@
+<?php
+// Inicia a sessão
+session_start();
 
-
-
-
+// Verifica se o usuário está logado
+$usuarioLogado = isset($_SESSION['usuario']);
+$isAdmin = $usuarioLogado && isset($_SESSION['usuario']['tipo_usuario_id']) && $_SESSION['usuario']['tipo_usuario_id'] == 2;
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,10 +19,9 @@
 </head>
 <body>
     <header>
-        <div class="container header-content    "> 
+        <div class="container header-content"> 
             <div class="container-fluid col-11 m-auto"> 
-                <a href="index.html"> <img src="img/Logo.png" style="height: 100px; width: 100px;"> </a>
-            
+                <a href="index.php"> <img src="img/Logo.png" style="height: 100px; width: 100px;" alt="Logo Octo Doces"> </a>
             </div>
             <nav>
                 <ul>
@@ -27,8 +30,21 @@
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#contact">Contato</a></li>
                     <li><a href="pages/carrinho.php">Carrinho</a></li>
-                    <li><a href="pages/login.php">Login</a></li>
-                   
+                    <?php if ($usuarioLogado): ?>
+                        <!-- Usuário logado -->
+                        <li>
+                            <a href="pages/perfil.php" class="btn-login <?= $isAdmin ? 'admin' : '' ?>">
+                                <i class="fas fa-user"></i>
+                                <?= htmlspecialchars($_SESSION['usuario']['nome']) ?>
+                                <?php if ($isAdmin): ?>
+                                    <span class="admin-badge">ADMIN</span>
+                                <?php endif; ?>
+                            </a>
+                        </li>
+                    <?php else: ?>
+                        <!-- Usuário não logado -->
+                        <li><a href="pages/login.php" class="btn-login">Login</a></li>
+                    <?php endif; ?>
                 </ul>
             </nav>
         </div>
@@ -42,8 +58,6 @@
                 <a href="pages/produtos.php" class="btn">Conheça nossos produtos</a>
             </div>
         </div>
-    </section>
-    
     </section>
     
     <footer id="contact">
@@ -72,7 +86,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Octo Doces. Todos os direitos reservados.</p>
+                <p>&copy; <?= date('Y') ?> Octo Doces. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>

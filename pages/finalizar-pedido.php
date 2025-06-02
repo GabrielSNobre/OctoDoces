@@ -571,7 +571,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <a href="adicionar-endereco.php" style="display: inline-block; margin-top: 15px;">Adicionar novo endereço</a>
                     <?php else: ?>
                         <p>Você não possui endereços cadastrados.</p>
-                        <a href="adicionar_endereco.php" class="btn">Cadastrar Endereço</a>
+                        <a href="adicionar-endereco.php" class="btn">Cadastrar Endereço</a>
                     <?php endif; ?>
                 </div>
                 

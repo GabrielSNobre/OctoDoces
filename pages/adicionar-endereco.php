@@ -70,28 +70,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Endereço - Octo Doces</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/stylepage.css">
     <style>
         :root {
-            --primary: #FF6B6B;
-            --secondary: #4ECDC4;
-            --accent: #FFE66D;
-            --dark: #292F36;
-            --light: #F7FFF7;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-        
+     --primary: #ffffff;
+     --secondary: #4ECDC4;
+     --accent: #fc0000;
+     --dark: #292F36;
+     --light: #F7FFF7;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ body {
+     background-color: rgb(255, 255, 255);
+     color: var(--dark);
+     line-height: 1.6;
+ }
+
         .container {
             max-width: 800px;
             margin: 30px auto;
@@ -182,8 +184,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             color: #721c24;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style/stylepage.css">
 </head>
 <body>
    <header>
@@ -303,8 +303,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             
             <div class="form-group">
-                <a href="perfil.php" class="btn btn-back">Cancelar</a>
+                
                 <button type="submit" class="btn">Salvar Endereço</button>
+                <a href="perfil.php" class="btn btn-back" aling-text="center">Cancelar</a>
             </div>
         </form>
     </div>

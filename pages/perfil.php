@@ -67,6 +67,7 @@ $isAdmin = ($_SESSION['usuario']['tipo_usuario_id'] ?? 0) == 2;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil - Octo Doces</title>
+    
     <style>
         :root {
             --primary: #FF6B6B;
@@ -125,7 +126,7 @@ $isAdmin = ($_SESSION['usuario']['tipo_usuario_id'] ?? 0) == 2;
         }
         
         .btn-logout {
-            background-color: var(--primary);
+            background-color: FF6B6B ;
             color: white;
         }
         
