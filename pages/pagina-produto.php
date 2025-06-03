@@ -146,10 +146,10 @@ $isAdmin = $usuarioLogado && isset($_SESSION['usuario']['tipo_usuario_id']) && $
             </div>
             <nav>
                 <ul>
-                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../index.php">Início</a></li>
                     <li><a href="produtos.php">Produtos</a></li>
-                    <li><a href="../index.html#about">Sobre</a></li>
-                    <li><a href="../index.hmtl#contact">Contato</a></li>
+                    <li><a href="../index.php#about">Sobre</a></li>
+                    <li><a href="../index.php#contact">Contato</a></li>
                     <li><a href="carrinho.php">Carrinho</a></li>
                     <?php if ($usuarioLogado): ?>
                         <!-- Usuário logado -->
@@ -186,7 +186,7 @@ $isAdmin = $usuarioLogado && isset($_SESSION['usuario']['tipo_usuario_id']) && $
                     <?= nl2br(htmlspecialchars($produto['descricao'])) ?>
                 </div>
                 
-                <form method="POST" action="adicionar_carrinho.php">
+                <form method="POST" action="adicionar-carrinho.php">
                     <input type="hidden" name="produto_id" value="<?= $produto['id'] ?>">
                     
                     <div class="quantidade-container">
